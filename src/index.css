@@ -8,38 +8,41 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 72% 51%;
+    --primary: 0 85% 58%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 95% 68%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 72% 51%;
+    --accent: 0 85% 58%;
     --accent-foreground: 0 0% 100%;
+    --accent-glow: 0 95% 68%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 0 72% 51%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 85% 58%;
     
-    --gaming-glow: 0 72% 51%;
-    --panel-bg: 0 0% 10%;
+    --gaming-glow: 0 85% 58%;
+    --panel-bg: 0 0% 8%;
+    --panel-border: 0 20% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -114,5 +117,24 @@ All colors MUST be HSL.
   
   .clip-v-inner {
     clip-path: polygon(50% 15%, 85% 45%, 70% 85%, 30% 85%, 15% 45%);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--accent-glow) / 0.5),
+                 0 0 40px hsl(var(--accent-glow) / 0.3),
+                 0 0 60px hsl(var(--accent-glow) / 0.2);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3),
+                0 0 40px hsl(var(--accent) / 0.2),
+                inset 0 0 20px hsl(var(--accent) / 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-glow)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
